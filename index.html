@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Password Strength Checker</h1>
+    <div class="password-container">
+      <input type="password" id="password" placeholder="Enter your password" oninput="checkPasswordStrength()">
+      <button id="toggle-visibility" onclick="togglePasswordVisibility()">Show</button>
+    </div>
+    <button onclick="generateStrongPassword()">Generate Strong Password</button>
+    <div id="strength-indicator"></div>
+    <p id="strength-text"></p>
+    <p id="suggestion" style="display: none; color: #555;">
+      Suggested Password: <span id="generated-password"></span>
+      <button id="copy-password" onclick="copyPassword()">Copy</button>
+    </p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
